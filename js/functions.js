@@ -87,8 +87,8 @@ function envoyerVote(recipeId, type) {
     .then(data => {
         if (data.success) {
             // Mettre à jour le texte des boutons directement
-            document.getElementById(`like-btn-${recipeId}`).innerText = `👍 J’aime (${data.likes})`;
-            document.getElementById(`dislike-btn-${recipeId}`).innerText = `👎 Je n’aime pas (${data.dislikes})`;
+            document.getElementById(`like-btn-${recipeId}`).innerText = `👍(${data.likes})`;
+            document.getElementById(`dislike-btn-${recipeId}`).innerText = `👎(${data.dislikes})`;
 
             // Message si clic redondant
             if (data.status === "same") {
