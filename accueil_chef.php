@@ -4,9 +4,8 @@ require_once(__DIR__ . '/functions/functions.php');
 require_once(__DIR__ . '/db/connect.php');
 
 redirectIfNotAuthorized(1); // Seuls les chefs accèdent ici
-
+git add .
 $chef_id = $_SESSION['email'];
-// // $recettes = getRecettesDuChef($chef_id);
 
 $show_welcome_message = false;
 
