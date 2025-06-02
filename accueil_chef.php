@@ -72,9 +72,22 @@ $recipes = $stmt->fetchAll();
                                 <a href="recipes_update.php?id=<?= $recipe['id'] ?>" class="btn btn-outline-primary btn-sm">Éditer</a>
                                 <a href="recipes_delete.php?id=<?= $recipe['id'] ?>" class="btn btn-outline-danger btn-sm">Supprimer</a>
                             </div>
+                            <?php
+                            // Compter dynamiquement les likes/dislikes
+                            $countsStmt = $pdo->prepare("SELECT type, COUNT(*) as total FROM votes WHERE recipe_id = ? GROUP BY type");
+                            $countsStmt->execute([$recipe['id']]);
+                            $results = $countsStmt->fetchAll(PDO::FETCH_ASSOC);
+                            $likes = 0;
+                            $dislikes = 0;
+                            foreach ($results as $row) {
+                                if ($row['type'] === 'like') $likes = $row['total'];
+                                if ($row['type'] === 'dislike') $dislikes = $row['total'];
+                            }
+                            ?>
                             <div class="text-muted">
-                                👍🏾 <?= $recipe['likes'] ?? 0 ?> &nbsp;&nbsp; 👎🏾 <?= $recipe['dislikes'] ?? 0 ?>
+                                👍🏾 <?= $likes ?> &nbsp;&nbsp; 👎🏾 <?= $dislikes ?>
                             </div>
+
                         </div>
                     </div>
                 </div>
