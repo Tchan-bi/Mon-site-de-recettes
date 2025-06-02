@@ -79,12 +79,13 @@ $recettes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     ?>
 
                     <!-- Boutons de vote -->
-                    <button id="like-btn-<?= $recette['id'] ?>" onclick="envoyerVote(<?= $recette['id'] ?>, 'like')">
+                    <button type="button" id="like-btn-<?= $recette['id'] ?>" onclick="envoyerVote(<?= $recette['id'] ?>, 'like')">
                         👍(<?= $likes ?>)
                     </button>
-                    <button id="dislike-btn-<?= $recette['id'] ?>" onclick="envoyerVote(<?= $recette['id'] ?>, 'dislike')">
+                    <button type="button" id="dislike-btn-<?= $recette['id'] ?>" onclick="envoyerVote(<?= $recette['id'] ?>, 'dislike')">
                         👎(<?= $dislikes ?>)
                     </button>
+
 
                     <hr>
                 </div>
