@@ -1,0 +1,150 @@
+/* Styles généraux */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Titres centrés */
+h1.text-center, h3.text-center {
+    color: #343a40;
+    margin-bottom: 1.5rem;
+}
+
+/* Cartes */
+.card {
+    border: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulaires */
+.form-label {
+    font-weight: 500;
+    color: #212529;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Bouton principal */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+/* Alertes */
+.alert {
+    border-radius: 5px;
+}
+
+/* Lien retour */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Message de bienvenue animé */
+#welcome-message {
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#welcome-message.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* Centrage du formulaire */
+.container .row.justify-content-center {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Navbar personnalisée */
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #495057;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #0d6efd;
+}
+
+/* Footer (si vous en avez un) */
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #f1f1f1;
+    color: #6c757d;
+}
+
+/* Checkbox mots de passe */
+.form-check-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Texte explicatif */
+small.form-text {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.recipe-card {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.recipe-card h3 a {
+    text-decoration: none;
+    color: #343a40;
+    font-weight: bold;
+}
+
+.recipe-card h3 a:hover {
+    color: #0d6efd;
+}
+
+.recipe-card .actions {
+    margin-top: 15px;
+}
+
+.recipe-card .actions a {
+    margin-right: 10px;
+}
+
+.recipe-card .likes-dislikes {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
