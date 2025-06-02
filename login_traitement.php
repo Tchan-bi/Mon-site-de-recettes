@@ -70,6 +70,7 @@ if ($user && password_verify($password, $user['password'])) {
         'email' => $user['mail'],
         'type_user' => (int)$user['type_user']  // CAST ICI
     ];
+    $_SESSION['id_user'] = $user['id_user'];
 
     $_SESSION['welcome_shown'] = false;
     $_SESSION['succes_message'] = false;

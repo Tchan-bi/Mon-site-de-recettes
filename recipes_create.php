@@ -21,10 +21,8 @@ require_once(__DIR__ . '/db/connect.php');
     <?php require_once(__DIR__ . '/header.php'); ?>
 
     <?php if (!empty($_SESSION['success'])): ?>
-        <div class="alert alert-success alert-dismissible fade show" role="alert" id="success-message">
-            <?php echo $_SESSION['success'];
-            unset($_SESSION['success']); ?>
-        </div>
+        <div class="alert alert-success" id="success-message"><?= $_SESSION['success'];
+                                                                unset($_SESSION['success']); ?></div>
     <?php endif; ?>
 
     <?php if (!empty($_SESSION['error'])): ?>
