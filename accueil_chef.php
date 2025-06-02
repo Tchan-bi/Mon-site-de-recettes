@@ -3,8 +3,8 @@ session_start();
 require_once(__DIR__ . '/functions/functions.php');
 require_once(__DIR__ . '/db/connect.php');
 
-redirectIfNotAuthorized(1); // Seuls les chefs accèdent ici
-git add .
+redirectIfNotAuthorized(1); // Seuls les chefs accèdent ici tranquillement
+
 $chef_id = $_SESSION['email'];
 
 $show_welcome_message = false;
